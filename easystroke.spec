@@ -1,5 +1,5 @@
 %define version		0.4.10
-%define release		%mkrel 1
+%define release		%mkrel 2
 
 Summary:		A gesture-recognition application for X11
 Name:			easystroke
@@ -38,9 +38,15 @@ sed -i -e 's:/usr/local:%{_prefix}:' Makefile
 	CC="gcc -std=c99 %{optflags}" \
 	LDFLAGS="%{ldflags}"
 
+# man page
+make man
+
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+
+# man page install
+install -D -m644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 
 %find_lang %{name}
 
@@ -53,3 +59,4 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
+%{_mandir}/man1/%{name}*
