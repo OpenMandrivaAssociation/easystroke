@@ -15,6 +15,7 @@ BuildRequires:		dbus-glib-devel
 BuildRequires:		boost-devel
 BuildRequires:		libxtst-devel
 BuildRequires:		intltool
+BuildRequires:		help2man
 
 %description
 Easystroke is a gesture-recognition application for X11. Gestures or 
