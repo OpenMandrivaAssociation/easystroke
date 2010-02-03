@@ -1,5 +1,5 @@
 %define version		0.4.10
-%define release		%mkrel 2
+%define release		%mkrel 3
 
 Summary:		A gesture-recognition application for X11
 Name:			easystroke
