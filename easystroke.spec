@@ -1,5 +1,5 @@
-%define version		0.4.10
-%define release		%mkrel 3
+%define version		0.5.2
+%define release		%mkrel 1
 
 Summary:		A gesture-recognition application for X11
 Name:			easystroke
@@ -9,6 +9,7 @@ Group:			Accessibility
 License:		ISC
 Url:			http://easystroke.sourceforge.net/
 Source0:		http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
+Patch0:			easystroke-0.5.2-timeout.patch
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:		gtkmm2.4-devel
 BuildRequires:		dbus-glib-devel
@@ -31,6 +32,7 @@ time being highly configurable and offering many advanced features.
 
 %prep
 %setup -q
+%patch0 -p1
 # fix PREFIX
 sed -i -e 's:/usr/local:%{_prefix}:' Makefile
 
