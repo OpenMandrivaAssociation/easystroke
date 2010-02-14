@@ -14,7 +14,7 @@ BuildRequires:		gtkmm2.4-devel
 BuildRequires:		dbus-glib-devel
 BuildRequires:		boost-devel
 BuildRequires:		libxtst-devel
-BuildRequires:		x11-server-devel
+BuildRequires:		x11-server-devel >= 1.7
 BuildRequires:		intltool
 BuildRequires:		help2man
 
