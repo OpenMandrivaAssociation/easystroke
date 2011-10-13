@@ -1,5 +1,5 @@
-%define version		0.5.3
-%define release		%mkrel 3
+%define version		0.5.5.1
+%define release		%mkrel 1
 
 Summary:		A gesture-recognition application for X11
 Name:			easystroke
@@ -13,10 +13,15 @@ BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:		gtkmm2.4-devel
 BuildRequires:		dbus-glib-devel
 BuildRequires:		boost-devel
+BuildRequires:		libx11-devel
+BuildRequires:		libxext-devel
+BuildRequires:		libxi-devel
+BuildRequires:		libxfixes-devel
 BuildRequires:		libxtst-devel
-BuildRequires:		x11-server-devel >= 1.7
+BuildRequires:		x11-server-devel
 BuildRequires:		intltool
 BuildRequires:		help2man
+
 
 %description
 Easystroke is a gesture-recognition application for X11. Gestures or 
