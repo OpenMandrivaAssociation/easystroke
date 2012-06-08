@@ -1,27 +1,23 @@
-%define version		0.5.5.1
-%define release		%mkrel 1
+Summary:	A gesture-recognition application for X11
+Name:		easystroke
+Version:	0.5.5.1
+Release:	2
+Group:		Accessibility
+License:	ISC
+Url:		http://easystroke.sourceforge.net/
+Source0:	http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
 
-Summary:		A gesture-recognition application for X11
-Name:			easystroke
-Version:		%{version}
-Release:		%{release}
-Group:			Accessibility
-License:		ISC
-Url:			http://easystroke.sourceforge.net/
-Source0:		http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
-BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:		gtkmm2.4-devel
-BuildRequires:		dbus-glib-devel
-BuildRequires:		boost-devel
-BuildRequires:		libx11-devel
-BuildRequires:		libxext-devel
-BuildRequires:		libxi-devel
-BuildRequires:		libxfixes-devel
-BuildRequires:		libxtst-devel
-BuildRequires:		x11-server-devel
-BuildRequires:		intltool
-BuildRequires:		help2man
-
+BuildRequires:	gtkmm2.4-devel
+BuildRequires:	dbus-glib-devel
+BuildRequires:	boost-devel
+BuildRequires:	libx11-devel
+BuildRequires:	libxext-devel
+BuildRequires:	libxi-devel
+BuildRequires:	libxfixes-devel
+BuildRequires:	libxtst-devel
+BuildRequires:	x11-server-devel
+BuildRequires:	intltool
+BuildRequires:	help2man
 
 %description
 Easystroke is a gesture-recognition application for X11. Gestures or 
@@ -49,7 +45,6 @@ sed -i -e 's:/usr/local:%{_prefix}:' Makefile
 make man
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 # man page install
@@ -57,13 +52,10 @@ install -D -m644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc LICENSE changelog
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_mandir}/man1/%{name}*
+
