@@ -10,11 +10,11 @@ Source0:	http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	boost-devel
-BuildRequires:	libx11-devel
-BuildRequires:	libxext-devel
-BuildRequires:	libxi-devel
-BuildRequires:	libxfixes-devel
-BuildRequires:	libxtst-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xext)
+BuildRequires:	pkgconfig(xi)
+BuildRequires:	pkgconfig(xfixes)
+BuildRequires:	pkgconfig(xtst)
 BuildRequires:	x11-server-devel
 BuildRequires:	intltool
 BuildRequires:	help2man
