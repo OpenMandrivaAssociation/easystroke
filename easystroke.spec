@@ -1,7 +1,7 @@
 Summary:	A gesture-recognition application for X11
 Name:		easystroke
 Version:	0.5.5.1
-Release:	3
+Release:	4
 Group:		Accessibility
 License:	ISC
 Url:		http://easystroke.sourceforge.net/
