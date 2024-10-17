@@ -4,7 +4,7 @@ Version:	0.5.5.1
 Release:	4
 Group:		Accessibility
 License:	ISC
-Url:		http://easystroke.sourceforge.net/
+Url:		https://easystroke.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
 
 BuildRequires:	gtkmm2.4-devel
