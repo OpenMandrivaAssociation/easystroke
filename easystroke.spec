@@ -7,6 +7,7 @@ License:	ISC
 Url:		https://easystroke.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/easystroke/%{name}-%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	gtkmm2.4-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	boost-devel
